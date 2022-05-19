@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    tools:context=".ProductDeleteActivity">
+
+    <TextView
+        android:id="@+id/deleteProductText"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:text="Delete a Product"
+        android:textSize="30sp"
+        android:textStyle="bold">
+    </TextView>
+
+    <TextView
+        android:id="@+id/selectProductText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_below="@id/deleteProductText"
+        android:text="Select a product"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/productListDelete"
+        android:layout_below="@id/selectProductText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content">
+
+    <ListView
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:id="@+id/listViewDelete"
+        />
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/deleleDeleteProductBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productListDelete"
+        android:layout_marginLeft="45dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="@color/teal_700"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:text="Delete" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menuRedirectDeleteBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/deleleDeleteProductBtn"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Back to Menu" />
+</RelativeLayout>

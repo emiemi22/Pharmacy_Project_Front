@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    tools:context=".SignUp">
+
+    <TextView
+        android:id="@+id/signUpText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textSize="35dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/usernameSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signUpText"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
+        android:drawablePadding="20dp"
+        android:hint="Email"
+        android:padding="20dp" />
+
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/usernameSignUp"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/ic_baseline_person_pin_24"
+        android:drawablePadding="20dp"
+        android:hint="First Name"
+        android:padding="20dp" />
+
+
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstName"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/ic_baseline_person_pin_24"
+        android:drawablePadding="20dp"
+        android:hint="Last Name"
+        android:padding="20dp" />
+
+
+    <EditText
+        android:id="@+id/password1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lastName"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="20dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="20dp" />
+    <EditText
+        android:id="@+id/password2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password1"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="20dp"
+        android:inputType="textPassword"
+        android:hint="Repeat password"
+        android:padding="20dp" />
+
+<!--    <com.google.android.material.button.MaterialButton-->
+<!--        android:id="@+id/loginbtn"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/password"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:backgroundTint="@color/teal_700"-->
+<!--        android:text="Sign up" />-->
+
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/forgotPass"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_below="@id/loginbtn"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:text="Forgot Password?" />-->
+
+    <TextView
+        android:id="@+id/loginRedirectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/registerbtn"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:text="Have an account already?" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password2"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/teal_700"
+        android:text="Sign"
+        />
+
+<!--    <TextView-->
+<!--        android:id="@+id/othersign"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@id/socialBtn"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_margin="20dp"-->
+<!--        android:text="Login with" />-->
+
+
+</RelativeLayout>

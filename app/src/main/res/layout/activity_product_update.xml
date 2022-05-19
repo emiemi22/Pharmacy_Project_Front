@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ProductUpdateActivity">
+
+    <TextView
+        android:id="@+id/updateProductText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:text="Update Product"
+        android:textSize="20sp"
+        android:textStyle="bold">
+    </TextView>
+
+
+    <EditText
+        android:id="@+id/productUpdateIdInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateProductText"
+        android:drawableLeft="@drawable/ic_baseline_format_list_numbered_24"
+        android:drawablePadding="20dp"
+        android:hint="ID Product"
+        android:padding="20dp" />
+
+    <EditText
+        android:id="@+id/productUpdateNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productUpdateIdInput"
+        android:drawableLeft="@drawable/ic_baseline_add_shopping_cart_24"
+        android:drawablePadding="20dp"
+        android:hint="Product Name"
+        android:padding="20dp" />
+
+    <EditText
+        android:id="@+id/updatePriceInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productUpdateNameInput"
+        android:drawableLeft="@drawable/ic_baseline_attach_money_24"
+        android:drawablePadding="20dp"
+        android:hint="Product Price"
+        android:inputType="numberDecimal"
+        android:padding="20dp" />
+
+
+    <EditText
+        android:id="@+id/categoryUpdateTypeInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updatePriceInput"
+        android:drawableLeft="@drawable/ic_baseline_category_24"
+        android:drawablePadding="20dp"
+        android:hint="Category Type"
+        android:inputType="textCapWords"
+        android:padding="20dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/updateProductBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/categoryUpdateTypeInput"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/teal_700"
+        android:text="Update Product"
+        />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menuRedirectUpdateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateProductBtn"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Back to Menu" />
+</RelativeLayout>
