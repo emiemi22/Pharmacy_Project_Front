@@ -1,6 +1,7 @@
 package com.example.pharmacy
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
@@ -38,6 +39,13 @@ class Login : AppCompatActivity() {
         googleBtn.setOnClickListener(){
             val intent2 = Intent(this, MenuEmployeeActivity::class.java)
             startActivity(Intent(intent2))
+        }
+        twitterBtn.setOnClickListener(){
+            val viewIntent = Intent(
+                "android.intent.action.VIEW",
+                Uri.parse("https://www.youtube.com/watch?v=3qyZWDepPLI&ab_channel=AdrianMinune")
+            )
+            startActivity(viewIntent)
         }
 
     }

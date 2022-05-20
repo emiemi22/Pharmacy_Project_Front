@@ -16,6 +16,7 @@ import com.example.pharmacy.network.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UnknownFormatConversionException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -54,9 +55,12 @@ public class ProductViewActivity extends AppCompatActivity {
                 List<Object> products = response.body();
                 List<String> productsView = new ArrayList<>();
                 for (Object p : products) {
-                    Product product = (Product) p;
-                    String str = product.getProductName() + " " + product.getId();
+                    //throw new UnknownFormatConversionException(p.toString());
+//                    Product product = (Product) p;
+                    String str = p.toString();
                     productsView.add(str);
+                    Log.d("ProductViewActivity", "Objects " + p.toString() + " type " + p.getClass())
+                    ;
                 }
                 ArrayAdapter arrayAdapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, productsView);
                 listView.setAdapter(arrayAdapter);
