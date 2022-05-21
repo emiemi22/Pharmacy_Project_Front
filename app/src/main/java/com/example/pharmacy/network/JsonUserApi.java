@@ -5,7 +5,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 
-public interface JsonPlaceHolderApi {
-    @GET("product")
-    Call<List<Product>> getProducts();
+public interface JsonUserApi {
+    @GET("user_table")
+    Call<List<User>> getUsersList();
 }

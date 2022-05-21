@@ -40,21 +40,21 @@ public class ProductViewActivity extends AppCompatActivity {
                 .build();
         JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
 
-        Call<List<Object>> call = jsonPlaceHolderApi.getProducts();
+        Call<List<Product>> call = jsonPlaceHolderApi.getProducts();
         Log.d("ProductViewActivity", "Al meu msj " + call.toString());
 
-        call.enqueue( new Callback<List<Object>>() {
+        call.enqueue( new Callback<List<Product>>() {
             @Override
-            public void onResponse(Call<List<Object>> call, Response<List<Object>> response) {
+            public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
                 if (!response.isSuccessful()) {
                     System.out.println("Code " + response.code());
                     Log.d("ProductViewActivity", "No Resp " + call.toString());
                     return;
                 }
                 Log.d("ProductViewActivity", "Resp " + call.toString());
-                List<Object> products = response.body();
+                List<Product> products = response.body();
                 List<String> productsView = new ArrayList<>();
-                for (Object p : products) {
+                for (Product p : products) {
                     //throw new UnknownFormatConversionException(p.toString());
 //                    Product product = (Product) p;
                     String str = p.toString();
@@ -67,7 +67,7 @@ public class ProductViewActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<List<Object>> call, Throwable t) {
+            public void onFailure(Call<List<Product>> call, Throwable t) {
                 Toast.makeText(ProductViewActivity.this, "Error happened 404", Toast.LENGTH_SHORT).show();
                 Log.d("ProductViewActivity", "Fail  " + call.toString());
                 t.printStackTrace();
