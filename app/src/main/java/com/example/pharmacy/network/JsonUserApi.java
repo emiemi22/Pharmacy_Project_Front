@@ -18,6 +18,5 @@ public interface JsonUserApi {
                        @Field("lastName") String lastName,
                        @Field("emailAddress") String emailAddress,
                        @Field("password") String password,
-                       @Field("role") String role
-                       );
+                       @Field("role") String role);
 }

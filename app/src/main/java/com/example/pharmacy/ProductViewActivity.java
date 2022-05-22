@@ -55,8 +55,6 @@ public class ProductViewActivity extends AppCompatActivity {
                 List<Product> products = response.body();
                 List<String> productsView = new ArrayList<>();
                 for (Product p : products) {
-                    //throw new UnknownFormatConversionException(p.toString());
-//                    Product product = (Product) p;
                     String str = p.toString();
                     productsView.add(str);
                     Log.d("ProductViewActivity", "Objects " + p.toString() + " type " + p.getClass())
