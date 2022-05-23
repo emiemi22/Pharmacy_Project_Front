@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.example.pharmacy.network.JsonPlaceHolderApi;
 import com.example.pharmacy.network.JsonUserApi;
 import com.example.pharmacy.network.NullOnEmptyConverterFactory;
+import com.example.pharmacy.network.Product;
 import com.example.pharmacy.network.User;
 
 import retrofit2.Call;
@@ -56,17 +57,17 @@ public class ProductAddActivity extends AppCompatActivity {
                             .addConverterFactory(GsonConverterFactory.create())
                             .build();
                     JsonPlaceHolderApi jsonPlaceHolderApi = retrofit.create(JsonPlaceHolderApi.class);
-                    Call<User> call = jsonPlaceHolderApi.addProduct(productName, price, categoryType, stock);
+                    Call<Product> call = jsonPlaceHolderApi.addProduct(productName, price, categoryType, stock);
 
-                    call.enqueue(new Callback<User>() {
+                    call.enqueue(new Callback<Product>() {
                         @Override
-                        public void onResponse(Call<User> call, Response<User> response) {
+                        public void onResponse(Call<Product> call, Response<Product> response) {
                             Log.d("Activity Add", "ONRESPONSE" + String.valueOf(response.body()));
                             Toast.makeText(ProductAddActivity.this, "Product added!", Toast.LENGTH_SHORT).show();
                         }
 
                         @Override
-                        public void onFailure(Call<User> call, Throwable t) {
+                        public void onFailure(Call<Product> call, Throwable t) {
                             Log.d("Activity Add", "ONFAILUIRE" + String.valueOf(call));
                             t.printStackTrace();
                         }

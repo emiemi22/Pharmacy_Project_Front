@@ -20,20 +20,20 @@
 
 
     <EditText
-        android:id="@+id/productUpdateIdInput"
+        android:id="@+id/productUpdateStockInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/updateProductText"
+        android:layout_below="@id/categoryUpdateTypeInput"
         android:drawableLeft="@drawable/ic_baseline_format_list_numbered_24"
         android:drawablePadding="20dp"
-        android:hint="ID Product"
+        android:hint="Stock"
         android:padding="20dp" />
 
     <EditText
         android:id="@+id/productUpdateNameInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/productUpdateIdInput"
+        android:layout_below="@id/updateProductText"
         android:drawableLeft="@drawable/ic_baseline_add_shopping_cart_24"
         android:drawablePadding="20dp"
         android:hint="Product Name"
@@ -67,7 +67,7 @@
         android:id="@+id/updateProductBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/categoryUpdateTypeInput"
+        android:layout_below="@id/productListUpdate"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/teal_700"
         android:text="Update Product"
@@ -82,4 +82,23 @@
         android:layout_marginLeft="20dp"
         android:backgroundTint="@color/teal_700"
         android:text="Back to Menu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/productListUpdate"
+        android:layout_below="@id/productUpdateStockInput"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content">
+
+    <ListView
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:id="@+id/listViewUpdate"
+        />
+    </LinearLayout>
+
+
+
 </RelativeLayout>
