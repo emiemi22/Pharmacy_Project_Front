@@ -16,10 +16,15 @@ and to receive the response. For this I use Retrofit and Gson.
 I created the same classes as my model form back end part. Why because Retrofit automatically serialises the JSON response using a POJO(Plain Old Java Object) 
 which must be defined in advanced for the JSON Structure. To serialise JSON we need a converter to convert it into Gson first.
 
-This part will create a retrofit, we pass the base url, which is local host, but in order to work properly we have to put it on 10.0.2.2, to specify the converter, build.
+This part will create a retrofit, we pass the base url, which is localhost, but in order to work properly we have to put it on 10.0.2.2, specify the converter 
+and build it.
 And after to create the retrofit interface. In this interface Retrofit provides with a list 
-of annotations for each of the HTTP methods: @GET, @POST, @PUT, @DELETE, @PATCH or @HEAD. In the those interfaces (JsonPlaceHolderApi for instance), we’ve defined some methods 
-that perform HTTP requests with annotation. 
+of annotations for each of the HTTP methods: @GET, @POST, @PUT, @DELETE, @PATCH or @HEAD. In the those interfaces (JsonPlaceHolderApi for instance), we’ve defined some methods that perform HTTP requests with annotation. 
+
+@Field – send data as form-urlencoded. This requires a @FormUrlEncoded annotation attached with the method.
+@Body – Sends Java objects as request body.
+
+Running the application would call each of the endpoints and display a Toast message for them accordingly.
 
 
 
